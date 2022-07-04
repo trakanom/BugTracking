@@ -10,8 +10,8 @@ class UserList:
             self.Last_Name = Last_Name
     def __init__(self):
         self.TheList = {}
-    def Add_User(self):
-        pass
+    def Add_User(self, Username, Priv_Level, PW_Hash, First_Name, Last_Name, Email=None, Phone=None):
+        self.TheList[Username]=self.User_Template(Username, Priv_Level, PW_Hash, First_Name, Last_Name, Email, Phone)
     def Edit_User(self):
         pass
     def Delete_User(self):

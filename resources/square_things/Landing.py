@@ -1,3 +1,6 @@
+from tkinter import *
+
+from resources.classes.Userlists import UserList
 class Landing_Page:
     def __init__(self,Userlist,username):
         self.username = username
@@ -19,5 +22,17 @@ class Landing_Page:
     def Logoff(self):
         #Close window
         #Open Login window
+        self.root.destroy()
+        from .Login import Login
+        newlogin = Login(self.Userlist)
+        newlogin.OpenWindow()
+        #Closes the Landing_Page window and returns to Login window
     def Open_Window(self):
         #Initialize window
+        self.root = Tk()
+        Button(self.root, text="Add Project", command=self.Add_Project).grid(column=0, row=0, columnspan=2)
+        Button(self.root, text="Edit Project", command=self.Edit_Project).grid(column=0, row=1, columnspan=2)
+        Button(self.root, text="View Project", command=self.View_Project).grid(column=0, row=2, columnspan=2)
+        Button(self.root, text="Settings", command=self.Open_Settings).grid(column=0, row=5, columnspan=2)
+        Button(self.root, text="Log Off", command=self.Logoff).grid(column=0, row=6, columnspan=2)
+        self.root.mainloop()
