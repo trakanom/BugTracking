@@ -60,3 +60,10 @@ class Project_Window:
         # Get info from fields and insert them into the Ticket class
         # Pass this info to the landing page
         # Close window
+        NewPage = Ticket(author=self.author.get(), 
+                         date_submitted=time.localtime, 
+                         urgency=self.urgency.get(),
+                         title=self.title.get(), 
+                         description=self.description.get(), 
+                         date_due=self.date_due.get(), 
+                         assignee=self.assignee.get())
