@@ -1,5 +1,5 @@
 class Ticket:
-    def __init__(self,author, date_submitted, urgency, title, description, date_due, assignee):
+    def __init__(self,author, date_submitted, urgency, title, description, date_due=None, assignee=None):
         self.author=author
         self.date_submitted=date_submitted
         self.urgency=urgency
@@ -9,3 +9,4 @@ class Ticket:
         self.assignee=assignee
         self.updates = {}
         self.attachments = {}
+
