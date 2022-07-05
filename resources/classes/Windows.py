@@ -26,5 +26,6 @@ class Window:
         height=8 if columnspan == None else columnspan
         self.buttons[title]=Button(self.root,text=title,command=command,width=width,height=height).grid(column=column,row=row,columnspan=columnspan,rowspan=rowspan)
     def Get_Fields(self,*args):
-        pass
         #Returns a dict populated with the content of all fields referenced
+        return {str(arg):self.fields[arg] for arg in args}
+        #Todo: Figure out how to avoid errors.
