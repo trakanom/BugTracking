@@ -20,7 +20,11 @@ class Window:
         #When you're done building the window, use this.
         self.root.mainloop()
     def Add_Button(self,title,column,row,command,width=None,height=None,columnspan=None,rowspan=None):
-        pass
+        columnspan=1 if columnspan == None else columnspan
+        rowspan=1 if rowspan == None else rowspan
+        width=30 if width == None else width
+        height=8 if columnspan == None else columnspan
+        self.buttons[title]=Button(self.root,text=title,command=command,width=width,height=height).grid(column=column,row=row,columnspan=columnspan,rowspan=rowspan)
     def Get_Fields(self,*args):
         pass
         #Returns a dict populated with the content of all fields referenced
