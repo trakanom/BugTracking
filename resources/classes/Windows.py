@@ -1,12 +1,13 @@
 from tkinter import *
 class Window:
-    def __init__(self,title):
+    def __init__(self,title,*args):
         self.root = Tk()
         self.title = title
         self.root.title(title)
         self.fields={}
         self.labels={}
         self.buttons={}
+        self.args = {arg for arg in args}
     def Add_Field(self,title,column,row,width=None,height=None,columnspan=None,rowspan=None):
         #Let's make some fields for Entries
         columnspan=1 if columnspan == None else columnspan
