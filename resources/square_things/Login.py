@@ -5,9 +5,7 @@ from tkinter import *
 class Login:
     def __init__(self,Userlist):
         self.Userlist = Userlist
-        pass
-    def Test(self):
-        print("Pass")
+
     def Log_In(self):
         #Compare entered information to database
         #If match, destroy window, open landing page
