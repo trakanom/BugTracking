@@ -27,5 +27,7 @@ class Window:
         self.buttons[title]=Button(self.root,text=title,command=command,width=width,height=height).grid(column=column,row=row,columnspan=columnspan,rowspan=rowspan)
     def Get_Fields(self,*args):
         #Returns a dict populated with the content of all fields referenced
-        return {str(arg):self.fields[arg] for arg in args}
+        #Usage:
+        #newWindow.Add_Button("Test Fields",2,3,lambda: newWindow.Get_Fields("Test Field 1","Test Field 2"))
+        return {str(arg):self.fields[arg].get() for arg in args}
         #Todo: Figure out how to avoid errors.
