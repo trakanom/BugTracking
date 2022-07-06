@@ -19,6 +19,10 @@ class Login:
                 self.root.destroy()
                 Landing = Landing_Page(self.Userlist,user)
                 Landing.Open_Window()
+            else:
+                from .Error import ErrorPage
+                print('Error("Incorrect Information")')
+                self.Error = ErrorPage("Incorrect Information")
         except:
             from .Error import ErrorPage
             print('Error("Incorrect Information")')
@@ -28,6 +32,7 @@ class Login:
     def OpenWindow(self):
         #Initialize window with fields for username & password, and buttons for logging in and editing users
         self.root = Tk()
+        self.root.title("Log In")
         self.username = Entry(self.root, width=30)
         self.password = Entry(self.root,width=30)
         self.username.grid(column=0,row=0,columnspan=2)
