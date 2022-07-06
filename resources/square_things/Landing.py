@@ -11,6 +11,9 @@ class Landing_Page:
         #After "Save_Project" function is used, adds project to database of projects after checking for an existing match.
         pass
     def Edit_Project(self):
+        from .Edit_Project import Project_Window
+        project = Project_Window(self.Userlist,self.username,None)
+        project.Open_Window()
         #Opens the Edit_Project window with pre-filled fields based on the info already in the database
         pass
     def View_Project(self):
