@@ -33,6 +33,7 @@ class Landing_Page:
     def Open_Window(self):
         #Initialize window
         self.root = Tk()
+        self.root.title("Project Manager")
         Button(self.root, text="Add Project", command=self.Add_Project).grid(column=0, row=0, columnspan=2)
         Button(self.root, text="Edit Project", command=self.Edit_Project).grid(column=0, row=1, columnspan=2)
         Button(self.root, text="View Project", command=self.View_Project).grid(column=0, row=2, columnspan=2)
