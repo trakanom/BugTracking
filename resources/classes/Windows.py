@@ -31,3 +31,6 @@ class Window:
         #newWindow.Add_Button("Test Fields",2,3,lambda: newWindow.Get_Fields("Test Field 1","Test Field 2"))
         return {str(arg):self.fields[arg].get() for arg in args}
         #Todo: Figure out how to avoid errors.
+    def Close_Window(self):
+        #Closes window
+        self.root.destroy()
