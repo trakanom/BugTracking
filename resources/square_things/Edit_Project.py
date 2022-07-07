@@ -13,7 +13,7 @@ class Project_Window:
         pass
     def Open_Window(self):
         #Initialize window
-    
+        
         self.root = Tk()
         self.root.title("Edit Project")
         
@@ -61,9 +61,10 @@ class Project_Window:
         # Pass this info to the landing page
         # Close window
         NewPage = Ticket(author=self.author.get(), 
-                         date_submitted=time.localtime, 
-                         urgency=self.urgency.get(),
-                         title=self.title.get(), 
-                         description=self.description.get(), 
-                         date_due=self.date_due.get(), 
-                         assignee=self.assignee.get())
+                            date_submitted=time.localtime, 
+                            urgency=self.urgency.get(),
+                            title=self.title.get(), 
+                            description=self.description.get(), 
+                            date_due=self.date_due.get(), 
+                            assignee=self.assignee.get())
+        
