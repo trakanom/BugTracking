@@ -38,3 +38,10 @@ class Login:
         Button(self.root, text="Log In", command=self.Log_In).grid(column=3, row=0, columnspan=1)
         Button(self.root, text="Edit User", command=self.Test).grid(column=3, row=1, columnspan=1)
         self.root.mainloop()
+    def New_Open_Window(self):
+        self.root = Window("Login")
+        self.root.Add_Field("Username",0,0,75,8,2)
+        self.root.Add_Field("Password",0,1,75,8,2)
+        self.root.Add_Button("Log In",6,0,self.Log_In,10,8,1)
+        self.root.Add_Button("Edit User",6,1,self.Edit_Users,10,8,1)
+        self.root.Create_Window()
