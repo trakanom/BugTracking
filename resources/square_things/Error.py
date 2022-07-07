@@ -6,11 +6,7 @@ class ErrorPage:
         #Error Window with appropriate message
         self.root = Tk()
         text = Label(self.root,text=errors[errortype]).grid(column=0,row=0,columnspan=3)
-        # text.insert(INSERT,errors[errortype])
-        # text.pack()
-        # print(errors[errortype])
         button = Button(self.root,text="Okay",command=self.confirm).grid(column=1,row=1)
-        # button.pack()
     def confirm(self):
         #Button to close window
         self.root.destroy()
