@@ -8,14 +8,16 @@ class Window:
         self.labels={}
         self.buttons={}
         self.args = {arg for arg in args}
-    def Add_Field(self,title,column,row,width=None,height=None,columnspan=None,rowspan=None):
+    def Add_Field(self,title,column,row,width=None,height=None,columnspan=None,rowspan=None,default_value=None):
         #Let's make some fields for Entries
         columnspan=1 if columnspan == None else columnspan
         rowspan=1 if rowspan == None else rowspan
         width=30 if width == None else width
-        height=8 if columnspan == None else columnspan
-        self.fields[title]=Entry(self.root)
-        self.labels[title]=Label(self.root,text=title).grid(column=column,row=row)
+        height=8 if height == None else height
+        self.fields[title]=Entry(self.root,width=width)
+        if default_value != None:
+            self.fields[title].insert(0,default_value)
+        self.labels[title]=Label(self.root,text=(title+':')).grid(column=column,row=row)
         self.fields[title].grid(column=(column+1),row=row,columnspan=columnspan,rowspan=rowspan)
     def Create_Window(self):
         #When you're done building the window, use this.
