@@ -37,6 +37,12 @@ class Window:
     def Close_Window(self):
         #Closes window
         self.root.destroy()
+    def Add_Dropdown(self,title,contents,column,row,default_text=None):
+            self.fields[title] = StringVar(self.root) #define our variable
+            self.fields[title].set(default_text) #default
+            self.labels[title]=Label(self.root,text=(title+":")).grid(column=column,row=row)
+            w=OptionMenu(self.root,self.fields[title],*contents)
+            w.grid(column=(column+1),row=row)
         
         
 #Usage Notes:
