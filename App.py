@@ -14,4 +14,4 @@ MasterList.Add_User(Username="Trakanom", Priv_Level="Owner", PW_Hash="Hunter2", 
 newLogin = Login(MasterList)
 
 
-newLogin.OpenWindow()
+newLogin.New_Open_Window()
