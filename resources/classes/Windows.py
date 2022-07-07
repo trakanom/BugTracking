@@ -35,3 +35,16 @@ class Window:
     def Close_Window(self):
         #Closes window
         self.root.destroy()
+        
+        
+#Usage Notes:
+# newWindow=Window("NEW TEST WINDOW")
+# newWindow.Add_Field("Test Field 1",0,0,30,8,1,1)
+# newWindow.Add_Field("Test Field 2",0,1,30,8,1,1)
+# newWindow.Add_Field("Test Field 3",2,0,30,8,1,1)
+# newWindow.Add_Field("Test Field 4",2,1,30,8,1,1)
+# newWindow.Add_Button("Test Button",0,3,newWindow.root.destroy)
+# # wtf = newWindow.Get_Fields("Test Field 1","Test Field 3")
+# newWindow.Add_Button("Test Fields",2,3,lambda: newWindow.Get_Fields("Test Field 1","Test Field 2"))
+# newWindow.Add_Button("Maparoonie",3,3,lambda:print(list(map(lambda x: newWindow.Get_Fields(x),newWindow.fields.keys()))))
+# newWindow.Create_Window()
