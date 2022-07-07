@@ -13,7 +13,7 @@ class Landing_Page:
     def Edit_Project(self):
         from .Edit_Project import Project_Window
         project = Project_Window(self.Userlist,self.username,None)
-        project.Open_Window()
+        project.New_Open_Window()
         #Opens the Edit_Project window with pre-filled fields based on the info already in the database
         pass
     def View_Project(self):
@@ -28,7 +28,7 @@ class Landing_Page:
         self.root.destroy()
         from .Login import Login
         newlogin = Login(self.Userlist)
-        newlogin.Open_Window()
+        newlogin.New_Open_Window()
         #Closes the Landing_Page window and returns to Login window
     def Open_Window(self):
         #Initialize window
