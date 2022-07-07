@@ -28,7 +28,7 @@ class Landing_Page:
         self.root.destroy()
         from .Login import Login
         newlogin = Login(self.Userlist)
-        newlogin.OpenWindow()
+        newlogin.Open_Window()
         #Closes the Landing_Page window and returns to Login window
     def Open_Window(self):
         #Initialize window
